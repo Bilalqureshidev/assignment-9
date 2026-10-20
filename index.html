@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #0f172a;
+            color: white;
+            padding: 0 7%;
+            min-height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            color: #38bdf8;
+            font-size: 27px;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 20px 0;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #38bdf8;
+        }
+
+        .contact-btn {
+            background: #0284c7;
+            padding: 10px 16px;
+            border-radius: 6px;
+        }
+
+        .nav-links .contact-btn:hover {
+            background: #0369a1;
+            color: white;
+        }
+
+        /* Welcome section */
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 6vw, 52px);
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #0284c7;
+        }
+
+        .hero p {
+            max-width: 600px;
+            line-height: 1.8;
+            color: #475569;
+            margin-bottom: 25px;
+        }
+
+        .hero-btn {
+            background: #0f172a;
+            color: white;
+            text-decoration: none;
+            padding: 13px 22px;
+            border-radius: 6px;
+        }
+
+        .hero-btn:hover {
+            background: #0284c7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0f172a;
+            color: white;
+        }
+
+        /* Mobile responsive design */
+        @media (max-width: 650px) {
+            .navbar {
+                flex-direction: column;
+                padding: 0 15px 18px;
+            }
+
+            .logo {
+                padding: 18px 0;
+            }
+
+            .nav-links {
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 18px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">Bilal.dev</a>
+
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact" class="contact-btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <h1>Welcome to <span>Bilal.dev</span></h1>
+            <p>
+                I am learning HTML and CSS to create beautiful,
+                modern, and responsive websites. This project
+                demonstrates a navigation bar built with CSS.
+            </p>
+            <a href="#about" class="hero-btn">Learn More</a>
+        </section>
+
+        <section class="hero" id="about">
+            <h1>About <span>Me</span></h1>
+            <p>
+                I am a beginner web developer learning website
+                design and responsive layouts.
+            </p>
+        </section>
+
+        <section class="hero" id="services">
+            <h1>My <span>Services</span></h1>
+            <p>
+                HTML structure, CSS styling, and responsive
+                website design.
+            </p>
+        </section>
+
+        <section class="hero" id="portfolio">
+            <h1>My <span>Portfolio</span></h1>
+            <p>
+                Explore my web development practice projects
+                and assignments on GitHub.
+            </p>
+            <a href="https://github.com/Bilalqureshidev"
+               class="hero-btn" target="_blank"
+               rel="noopener noreferrer">Visit GitHub</a>
+        </section>
+
+        <section class="hero" id="contact">
+            <h1>Contact <span>Me</span></h1>
+            <p>
+                Thank you for visiting my website and viewing
+                my HTML CSS Navbar assignment.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bilal.dev | HTML CSS Navbar Assignment</p>
+    </footer>
+
+</body>
+</html>
